@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>category3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style type="text/css">
+input[type=text] {
+    resize: none;
+  width:auto!important;
+        border: none;
+        height: 100%;
+  }
+	textarea {
+        resize: none;
+	width:100% !important;
+        border: none;
+        height:auto;
+}
+	table {
+	 width:100%;
+	 border:2px solid;
+	border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+</style>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="Easy-Numeric-Input-Plugin-jQuery-numeric-js/jquery.numeric.js"></script> -->
+
+<body>
+<center>
+<h3>Category III</h3>
+<h4>Table 5 : Performance of attendance of Students</h4>
+<form method="post" action="/stack" onchange="myFunction();">
+ <div onchange="myFunc1();"><table style="width:100%">
+  <tr>
+    <th>Sr.No</th>
+    <th>Class/Course</th>
+    <th>Subjects taught</th>
+    <th>Sum of Students present</th>
+	<th>Lectures actually engaged</th>
+    <th>Students o roll</th>
+    <th>Average attendance (col4x100)/(col5xcol6)</th>
+	<th>Performance and Multiplying factors</th>
+    <th>Performance per subject</th>
+    <th>Average of col 9</th>
+	<th>Points Achieved</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+	<td>5</td>
+    <td>6</td>
+    <td>7</td>
+	<td>8</td>
+    <td>9</td>
+    <td>10</td>
+	<td>11</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n1" name="sp[]"></td>
+	<td><input type="text" id="n2" name="le[]"></td>
+    <td><input type="text" id="n3" name="sr[]"></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avr1"></textarea></td>
+	<td rowspan="4">*Excellent-1.0(100-81)<br> *good-0.8(80-61)<br> *satisfactory-0.6(60-41)<br> *poor-0.4(40-00)</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avg1"></textarea></td>
+    <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)" id="final"></textarea></td>
+	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n4" name="sp[]"></td>
+	<td><input type="text" id="n5" name="le[]"></td>
+    <td><input type="text" id="n6" name="sr[]"></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avr2"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avg2"></textarea></td>
+	</tr>
+  <tr>
+    <td>3</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n7" name="sp[]"></td>
+	<td><input type="text" id="n8" name="le[]"></td>
+    <td><input type="text" id="n9" name="sr[]"></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avr3"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avg3"></textarea></td>
+    </tr>
+  <tr>
+    <td>4</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n10" name="sp[]"></td>
+	<td><input type="text" id="n11" name="le[]"></td>
+    <td><input type="text" id="n12" name="sr[]"></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="avr4"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)" id="avg4"></textarea></td>
+  </tr>
+</table></div>
+<br><br>
+<h4>Table 6 : Performance of Results(Theory Subjects)<br>(Self Assessment)</h4>
+<br> 
+<div id="table2" onchange="myFunc3();">
+<table style = "width : 100%">
+  <tr>
+    <th>Sr.No</th>
+    <th>Class/Course</th>
+    <th>Subjects taught</th>
+    <th>Average result passing% of same subject for 1-3 years in Institute</th>
+	<th>Current Passing %</th>
+    <th style= "width :25%">Performance</th>
+    <th>Points Achieved per subject</th>
+	<th>Points Achieved (Avg of col 7)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+	<td>5</td>
+    <td>6</td>
+    <td>7</td>
+	<td>8</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n13" name="av[]" /></td>
+	<td><input type="text" id="n14" name="cu[]" /></td>
+	<td rowspan="4">For col(4)>=95%<br>*if col(5)> col(4) Then col(7)=10<br>*if col(4)-col(5)<= Then col(6)=08<br>*if 5<= col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05<br>for col(4)<=95%<br>*if col(5)-col(4)>=2 Then col(7)=10<br>*if |col(5)-col(4)|>=2 then col(7)=08<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject1"></textarea></td>
+    <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td></tr>
+  <tr>
+    <td>2</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n15" name="av[]" /></td>
+	<td><input type="text" id="n16" name="cu[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject2"></textarea></td>
+   </tr>
+  <tr>
+    <td>3</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n17" name="av[]" /><textarea id="n17" type="number"></textarea></td>
+	<td><input type="text" id="n18" name="cu[]" /><textarea id="n18" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject3"></textarea></td>
+    </tr>
+  <tr>
+    <td>4</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n19" name="av[]" /></td>
+	<td><input type="text" id="n20" name="cu[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject4"></textarea></td>
+  </tr>
+</table></div>
+<br><br>
+<h4>Table 7: Students Assessment based on overall effectiveness of teaching(Max. Points :10)</h4>
+<br>
+ <div id="table3" onchange="myFunc2();"><table style="width:100%">
+   <tr>
+    <th rowspan="2">Sr.No</th>
+    <th rowspan="2">Class/Course</th>
+    <th rowspan="2">Subjects taught</th>
+    <th rowspan="2">Total no. of Students in class</th>
+	<th colspan="4">No. of Students say</th>
+    <th rowspan="2">Performance <br>[col(5)+0.8xcol(6)+<br>0.6xcol(7)+0.4xcol(8)]/col(4)</th>
+    <th rowspan="2">Average of col(9)</th>
+	<th rowspan="2">Points achieved 10xcol(10)</th>
+  </tr>
+    <tr>
+    <th>Excellent</th>
+    <th>Good</th>
+    <th>Satisfactory</th>
+    <th>Poor</th>
+  </tr>
+  </tr>
+    <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+	<th>5</th>
+    <th>6</th>
+    <th>7</th>
+	<th>8</th>
+    <th>9</th>
+    <th>10</th>
+	<th>11</th>
+  </tr>
+    <tr>
+    <td>1</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n21" name="t[]" /></td>
+	<td><input type="text" id="n22" name="e[]" /></td>
+	<td><input type="text" id="n23" name="g[]" /></td>
+	<td><input type="text" id="n24" name="s[]" /></td>
+	<td><input type="text" id="n25" name="p[]" /></td>
+	<td><input type="text" id="total1" onkeyup="AutoGrowTextArea(this)" /></td>
+	<td rowspan="4"><textarea id="avg" onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td rowspan="4"><textarea id="Points3" onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	</tr>
+	  <tr>
+    <td>2</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n26" name="t[]" /></td>
+	<td><input type="text" id="n27" name="e[]" /></td>
+	<td><input type="text" id="n28" name="g[]" /></td>
+	<td><input type="text" id="n29" name="s[]" /></td>
+	<td><input type="text" id="n30" name="p[]" /></td>
+	<td><input type="text" onkeyup="AutoGrowTextArea(this)" id="total2" /></td>
+	</tr>
+	  <tr>
+    <td>3</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n31" name="t[]" /></td>
+	<td><input type="text" id="n32" name="e[]" /></td>
+	<td><input type="text" id="n33" name="g[]" /></td>
+	<td><input type="text" id="n34" name="s[]" /></td>
+	<td><input type="text" id="n35" name="p[]" /></td>
+	<td><input type="text" onkeyup="AutoGrowTextArea(this)" id="total3" /></td>
+	</tr>
+	  <tr>
+    <td>4</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n36" name="t[]" /></td>
+	<td><input type="text" id="n37" name="e[]" /></td>
+	<td><input type="text" id="n38" name="g[]" /></td>
+	<td><input type="text" id="n39" name="s[]" /></td>
+	<td><input type="text" id="n40" name="p[]" /></td>
+	<td><input type="text" onkeyup="AutoGrowTextArea(this)" id="total4" /></td>
+	</tr>
+ </table></div>
+ <br>
+ <input type="button" name="SubmitButton" value="Submit" onClick= "myFunction()" >
+</form>
+</center>
+</body>
+
+
+<script type="text/javascript">
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+
+function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x1 = document.getElementById("n1").value;
+    x2 = document.getElementById("n2").value;
+    x3 = document.getElementById("n3").value;
+    x4 = document.getElementById("n4").value;
+	  x5 = document.getElementById("n5").value;
+    x6 = document.getElementById("n6").value;
+    x7 = document.getElementById("n7").value;
+    x8 = document.getElementById("n8").value;
+	  x9 = document.getElementById("n9").value;
+    x10 = document.getElementById("n10").value;
+	  x11 = document.getElementById("n11").value;
+    x12 = document.getElementById("n12").value;
+    x13 = document.getElementById("n13").value;
+    x14 = document.getElementById("n14").value;
+	  x15 = document.getElementById("n15").value;
+    x16 = document.getElementById("n16").value;
+    x17 = document.getElementById("n17").value;
+    x18 = document.getElementById("n18").value;
+	  x19 = document.getElementById("n19").value;
+    x20 = document.getElementById("n20").value;
+	  x21 = document.getElementById("n21").value;
+    x22 = document.getElementById("n22").value;
+    x23 = document.getElementById("n23").value;
+    x24 = document.getElementById("n24").value;
+	  x25 = document.getElementById("n25").value;
+    x26 = document.getElementById("n26").value;
+    x27 = document.getElementById("n27").value;
+    x28 = document.getElementById("n28").value;
+	  x29 = document.getElementById("n29").value;
+    x30 = document.getElementById("n30").value;
+	  x31 = document.getElementById("n31").value;
+    x32 = document.getElementById("n32").value;
+    x33 = document.getElementById("n33").value;
+    x34 = document.getElementById("n34").value;
+	  x35 = document.getElementById("n35").value;
+    x36 = document.getElementById("n36").value;
+    x37 = document.getElementById("n37").value;
+    x38 = document.getElementById("n38").value;
+	  x39 = document.getElementById("n39").value;
+    x40 = document.getElementById("n40").value;
+   if(x1!='' && (x1<0 || isNaN(x1)==true)){
+      alert("enter valid count ");
+   }
+   if(x2!='' && (x2<0 || isNaN(x2)==true)){
+      alert("enter valid count ");
+   }
+   if(x3!='' && (x3<0 || isNaN(x3)==true)){
+      alert("enter valid count  ");
+   }
+   if(x4!='' && (x4<0 || isNaN(x4)==true)){
+      alert("enter valid count ");
+   }
+   if(x5!='' && (x5<0 || isNaN(x5)==true)){
+      alert("enter valid count ");
+   }
+   if(x6!='' && (x6<0 || isNaN(x6)==true)){
+      alert("enter valid count ");
+   }
+   if(x7!='' && (x7<0 || isNaN(x7)==true)){
+      alert("enter valid count ");
+   }
+   if(x8!='' && (x8<0 || isNaN(x8)==true)){
+      alert("enter valid count ");
+   }
+   if(x9!='' && (x9<0 || isNaN(x9)==true)){
+      alert("enter valid count ");
+   }
+   if(x10!='' && (x10<0 || isNaN(x10)==true)){
+      alert("enter valid count");
+   }
+   if(x11!='' && (x11<0 || isNaN(x11)==true)){
+      alert("enter valid count ");
+   }
+   if(x12!='' && (x2<0 || isNaN(x12)==true)){
+      alert("enter valid count ");
+   }
+   if(x13!='' && (x3<0 || isNaN(x13)==true)){
+      alert("enter valid count  ");
+   }
+   if(x14!='' && (x4<0 || isNaN(x14)==true)){
+      alert("enter valid count ");
+   }
+   if(x15!='' && (x5<0 || isNaN(x15)==true)){
+      alert("enter valid count ");
+   }
+   if(x16!='' && (x6<0 || isNaN(x16)==true)){
+      alert("enter valid count ");
+   }
+   if(x17!='' && (x7<0 || isNaN(x17)==true)){
+      alert("enter valid count ");
+   }
+   if(x18!='' && (x8<0 || isNaN(x18)==true)){
+      alert("enter valid count ");
+   }
+   if(x19!='' && (x9<0 || isNaN(x19)==true)){
+      alert("enter valid count ");
+   }
+   if(x20!='' && (x10<0 || isNaN(x20)==true)){
+      alert("enter valid count");
+   }
+   if(x21!='' && (x1<0 || isNaN(x21)==true)){
+      alert("enter valid count ");
+   }
+   if(x22!='' && (x2<0 || isNaN(x22)==true)){
+      alert("enter valid count ");
+   }
+   if(x23!='' && (x3<0 || isNaN(x23)==true)){
+      alert("enter valid count  ");
+   }
+   if(x24!='' && (x4<0 || isNaN(x24)==true)){
+      alert("enter valid count ");
+   }
+   if(x25!='' && (x5<0 || isNaN(x25)==true)){
+      alert("enter valid count ");
+   }
+   if(x26!='' && (x6<0 || isNaN(x26)==true)){
+      alert("enter valid count ");
+   }
+   if(x27!='' && (x7<0 || isNaN(x27)==true)){
+      alert("enter valid count ");
+   }
+   if(x28!='' && (x8<0 || isNaN(x28)==true)){
+      alert("enter valid count ");
+   }
+   if(x29!='' && (x9<0 || isNaN(x29)==true)){
+      alert("enter valid count ");
+   }
+   if(x30!='' && (x10<0 || isNaN(x30)==true)){
+      alert("enter valid count");
+   }
+   if(x31!='' && (x1<0 || isNaN(x31)==true)){
+      alert("enter valid count ");
+   }
+   if(x32!='' && (x2<0 || isNaN(x32)==true)){
+      alert("enter valid count ");
+   }
+   if(x33!='' && (x3<0 || isNaN(x33)==true)){
+      alert("enter valid count  ");
+   }
+   if(x34!='' && (x4<0 || isNaN(x34)==true)){
+      alert("enter valid count ");
+   }
+   if(x35!='' && (x5<0 || isNaN(x35)==true)){
+      alert("enter valid count ");
+   }
+   if(x36!='' && (x6<0 || isNaN(x36)==true)){
+      alert("enter valid count ");
+   }
+   if(x37!='' && (x7<0 || isNaN(x37)==true)){
+      alert("enter valid count ");
+   }
+   if(x38!='' && (x8<0 || isNaN(x38)==true)){
+      alert("enter valid count ");
+   }
+   if(x39!='' && (x9<0 || isNaN(x39)==true)){
+      alert("enter valid count ");
+   }
+   if(x40!='' && (x10<0 || isNaN(x40)==true)){
+      alert("enter valid count");
+   }
+   // var x = myFunc(x21,x22,x23,x24,x25);
+  }
+// function myFunc(t,e,g,s,p){
+//   var xhttp = new XMLHttpRequest();
+//   console.log(t,e,g,s,p);
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementById("total").value = this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "eg_3.php?e="+e+"&g="+g+"&s="+s+"&p="+p+"$t="+t, true);
+//   xhttp.send();
+//   return this;
+// }
+function myFunc1(){
+    var t = $('input[name^=sp]').map(function(idx, elem) {
+    return $(elem).val(); 
+  }).get();
+  var e = $('input[name^=le]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  var g = $('input[name^=sr]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  var j,co;
+  j=0;
+  co=0;
+  while(t[j]!=''){
+    co++;
+    j++;
+  }
+  for (var i = 0; i < co; i++) {
+    if(e[i]!=''&&t[i]!=''&&g[i]!=''){
+      var a = (+t[i])*100;
+      var b = (+e[i])*(+g[i]);
+      a = a/b; 
+      document.getElementById('avr'+(i+1)).value=a;
+      if (a<=100 && a>=80) {
+        document.getElementById('avg'+(i+1)).value=1.0;
+      }
+      else if (a<80 && a>=60) {
+        document.getElementById('avg'+(i+1)).value=0.8;
+      }
+      else if (a<60 && a>=40) {
+        document.getElementById('avg'+(i+1)).value=0.6;
+      }
+      else{
+        document.getElementById('avg'+(i+1)).value=0.4;
+      }
+    }
+  }
+  var sum = 0;
+  for (var i = 0; i < co; i++) {
+    sum = (+sum) + (+document.getElementById('avg'+(i+1)).value);
+  }
+  sum = sum/co;
+  document.getElementById('final').value=sum;
+}
+function myFunc2(){
+  var t = $('input[name^=t]').map(function(idx, elem) {
+    return $(elem).val(); 
+  }).get();
+  var e = $('input[name^=e]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  var g = $('input[name^=g]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  var s = $('input[name^=s]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  var p = $('input[name^=p]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  console.log(t,e,g,s,p);
+  var j,co;
+  j=0;
+  co=0;
+  while(t[j]!=''){
+    co++;
+    j++;
+  }
+  for (var i = 0; i < co; i++) {
+    var a = (+e[i]) + (+g[i]*0.8) + (+s[i]*0.6) + (+p[i]*0.4);
+    a = a/t[i]; 
+    document.getElementById('total'+(i+1)).value=a;
+}
+var totp = 0;
+for (var i = 0; i < co; i++) {
+  totp = (+totp) + (+document.getElementById('total'+(i+1)).value);
+}
+document.getElementById('avg').value=totp/co;
+document.getElementById('Points3').value=(document.getElementById('avg').value)*10;
+}
+function myFunc3(){
+  console.log("hi");
+  var t = $('input[name^=av]').map(function(idx, elem) {
+    return $(elem).val(); 
+  }).get();
+  var e = $('input[name^=cu]').map(function(idx, elem) {
+    return $(elem).val();
+  }).get();
+  console.log(t,e);
+  var j,co;
+  j=0;
+  co=0;
+  while(t[j]!=''){
+    co++;
+    j++;
+  }
+  var xhttp = new XMLHttpRequest();
+      var foo = $.parseJSON(xhttp.responseText);
+      for (var i = 0; i < co; i++) {
+        if (t[i]!='' && e[i]!='') {
+       xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('subject'+(i)).value=this.responseText;
+        }
+  };
+  xhttp.open("GET", "eg_3.php?av="+t[i]+"&cu="+e[i], true);
+  xhttp.send(); 
+}
+}
+}
+</script>
+</html> 

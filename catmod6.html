@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>category6</title>
+<style type="text/css">
+	textarea {
+        resize: none;
+	width:100% !important;
+        border: none;
+        height:100% !important;
+}
+	table {
+	 width:100%;
+	 border:2px solid;
+	border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+</style>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<body>
+<center>
+<form>
+<h3>Category : VI (3 years record)</h3>
+<h3>Special Achievements</h3>
+
+ <table>
+  <tr>
+    <th>Sr.No</th>
+    <th>Achievements</th>
+    <th colspan="4">Description</th>
+    <th>Remark</th>
+  </tr>
+  <tr>
+    <td rowspan="3">1.</td>
+    <td rowspan="3">Books, Chapter in books published(National/Internationsl)</td>
+	<th>National</th>
+	<th colspan="2">International</th>
+	<th>Chapter</th>
+	<td rowspan="3"><textarea type="number" id="Remark1"></textarea>
+	</tr>
+	<tr>
+	<td><input type="text" id="national"  onchange="myFunc2();" /></td>
+<td colspan="2"><input type="text" id="international"  onchange="myFunc2();"/></td>
+<td><input type="text" id="Chapter"  onchange="myFunc2();"/></td>
+
+
+
+</tr>
+<tr>
+</tr>
+
+<tr>
+    <td rowspan="3" >2.</td>
+    <td rowspan="3">Funded research/sponsored consultancy projects carried out or ongoing internal/external as per AICTE norms</td>
+	<th>Sponsored(Grant in L)</th>
+	<th colspan="2">Consulted</th>
+	<th>Patent</th>
+	<td rowspan="3" ><textarea onkeyup="AutoGrowTextArea(this)" id="Remark2"></textarea>
+	</tr>
+	<tr>
+	<td><input type="text" id="sponsored"  onchange="myFunc3();"/></td>
+    <td colspan="2"><input type="text" id="Consulted"  onchange="myFunc3();"/></td>
+    <td><input type="text" id="Patent"  onchange="myFunc3();"/></td>
+	
+
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  <td rowspan="4">3.</td>
+    <td rowspan="4">Research guidance</td>
+	<th rowspan="2">M.E</th>
+	<th colspan="2">Ph.D</th>
+	<th rowspan="2">M.Phil</th>
+	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)" id="Remark3"></textarea>
+	</tr>
+	<th>Only Completed</th>
+	<th>Thesis Submitted</th>
+
+	</tr>
+	<tr>
+	<td><input type="text" id="me"  onchange="myFunc4();"/></td>
+    <td><input type="text" id="phd1"  onchange="myFunc4();"/></td>
+	<td><input type="text" id="phd2"  onchange="myFunc4();"/></td>
+	<td><input type="text" id="mp"  onchange="myFunc4();"/></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+    <td rowspan="3" >4.</td>
+    <td rowspan="3">Position held in UNIV/national/international bodies.(Mention only if it is as per AICTE norms)</td>
+	<th colspan="2">National</th>
+	<th colspan="2">International</th>
+	<td rowspan="3" ><textarea onkeyup="AutoGrowTextArea(this)" id="Remark4"></textarea>
+	</tr>
+	<tr>
+    <td colspan="2"><input type="text" id="national2"  onchange="myFunc5();"/></td>
+    <td colspan="2"><input type="text" id="international2"  onchange="myFunc5();"/></td>
+  </tr>
+  <tr>
+  </tr>
+ <tr>
+    <td rowspan="3" >5.</td>
+    <td rowspan="3">Invited talks/Chairperson/reviewer/in technicalsymposia/conference(Natonal/International)</td>
+	<th colspan="2">National</th>
+	<th colspan="2">International</th>
+	<td rowspan="3" ><textarea onkeyup="AutoGrowTextArea(this)" id="Remark5"></textarea>
+	</tr>
+	<tr>
+    <td colspan="2"><input type="text" id="national3"  onchange="myFunc6();"/></td>
+    <td colspan="2"><input type="text" id="international3"  onchange="myFunc6();"/></td>
+  </tr>
+ <tr>
+ </tr>
+ <tr>
+ <tr>
+    <td>6.</td>
+    <td>Subjects expert in interview panel</td>
+    <td colspan="4"><input type="text" id="inte"  onchange="myFunc7();"/></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="Remark6"></textarea></td>
+  </tr>
+    <tr>
+    <td>7.</td>
+    <td>Participations in University/Reputed Institute related activites</td>
+    <td colspan="4"><input type="text" id="activites"  onchange="myFunc8();"/></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="Remark7"></textarea></td>
+  </tr>
+    </table> 
+</center>
+</body>
+<script type="text/javascript">
+
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+function myFunc2(){
+  var x = document.getElementById("national").value;
+  var y = document.getElementById("international").value;
+  var z = document.getElementById("Chapter").value;
+  var points =0;
+  if(x!=''){   
+    points = points + x*15;
+  }
+  if(y!=''){   
+    points = points + x*25;
+  }
+  if(z!=''){   
+    points = points + x*10;
+  }
+  document.getElementById("Remark1").value=points;
+}
+function myFunc3(){
+  var x = document.getElementById("sponsored").value;
+  var y = document.getElementById("Consulted").value;
+  var z = document.getElementById("Patent").value;
+  var points =0;
+  if (x>30) {
+    points = points + 20;
+  }
+  else if(x<=30 && x>5){
+    points = points + 15;
+  }
+  else{
+    points = points + 10;
+  }
+}
+function myFunc4(){
+  var x = document.getElementById("me").value;
+  var y = document.getElementById("phd1").value;
+  var z = document.getElementById("phd2").value;
+  var a = document.getElementById("mp").value;
+  var points=0;
+  if(x!=''){
+    points = points + x*3;
+  }
+  if(y!=''){
+    points = points + y*10;
+  }
+  if(z!=''){
+    points = points + z*7;
+  }
+  if(a!=''){
+    points = points + a*5;
+  }
+  document.getElementById("Remark3").value=points;
+}
+function myFunc5(){
+  var x = document.getElementById("national2").value;
+  var y = document.getElementById("international2").value;
+  var points = 0;
+  if (x!='') {
+    points = points + x*10;
+  }
+  if (y!='') {
+    points = points + y*20;
+  }
+  document.getElementById("Remark4").value=points;
+}
+function myFunc6(){
+  var x = document.getElementById("national3").value;
+  var y = document.getElementById("international3").value;
+  var points = 0;
+  if (x!='') {
+    points = points + x*10;
+  }
+  if (y!='') {
+    points = points + y*20;
+  }
+  document.getElementById("Remark5").value=points;
+}
+function myFunc7(){
+  var x = document.getElementById("inte").value;
+  var points =0;
+  if (x!='') {
+    points = points + x*20;
+  }
+  document.getElementById("Remark6").value=points;
+}
+function myFunc8(){
+  var x = document.getElementById("activites").value;
+  var points =0;
+  if (x!='') {
+    points = points + x*10;
+  }
+  document.getElementById("Remark7").value=points;
+}
+</script>
+</html> 

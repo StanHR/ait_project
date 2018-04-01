@@ -1,0 +1,136 @@
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head>
+<title>Table1</title>
+<style type="text/css">
+  textarea {
+    resize: none;
+  width:100% !important;
+  height:auto;
+  border: none;
+}
+  table {
+   width:100%;
+   border:2px solid;
+  border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="Easy-Numeric-Input-Plugin-jQuery-numeric-js/jquery.numeric.js"></script> -->
+
+</head>
+<body>
+  <form method="post" action="/stack" onchange="myFunction();">
+  <div>
+
+<center><h3>Category : V </h3></center>
+<h4>Table 9 Training courses</h4>
+
+ <table style="width:100%">
+  <tr>
+    <th>Sr.No</th>
+    <th>Training Courses Attended </th>
+    <th>Duration</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>Orientation Program</td>
+    <div><td><input type="text" name="a[]" id="c1" /></td></div>
+    <td><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>STTP</td>
+    <td><input type="text" name="a[]" id="c2" /></td>
+    <td><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>Worrkshop</td>
+    <td><input type="text" name="a[]" id="c3"/></td>
+    <td><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>Refresher Courses, CEP, CDP etc</td>
+    <td><input type="text" name="a[]" id="c4" /></td>
+    <td><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>FDP</td>
+    <td><input type="text" name="a[]" id="c5" /></td>
+    <td><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>Soft skills DP</td>
+    <td><input type="text" name="a[]" id="c6" /></td>
+    <td><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>Seminars</td>
+    <td><input type="text" name="a[]" id="c7" /></td>
+    <td><textarea></textarea></td>
+  </tr>
+</table>
+<p>Points acheived for Category V :<input type="text" name="ans2" id="ans2" readonly /></p></form></div>
+<script type="text/javascript">
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+function myFunction(){
+  var t = $('input[name^=a]').map(function(idx, elem) {
+    return $(elem).val(); 
+  }).get();
+  console.log(t);
+  var j,co,points;
+  j=0;
+  co=0;
+  points=0;
+  while(t[j]!=''){
+    co++;
+    j++;
+  }
+   for (var i = 0; i < co; i++) {
+    if(t[i] == 1){
+      points = points + 3;
+    }
+    else if (t[i] == 2 || t[i] == 3) {
+      points = points + 5;
+    } 
+    else if (t[i] == 7) {
+      points = points + 10;
+    }
+    else if (t[i] > 7) {
+      points = points + 20;
+    }
+}
+document.getElementById("ans2").value=points;
+}
+</script>
+
+</html>

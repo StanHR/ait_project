@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Category 2
+</title>
+<style type="text/css">
+  textarea {
+        resize: none;
+  width:100% !important;
+        border: none;
+        height: auto;
+}
+  table {
+   width:100%;
+   border:2px solid;
+  border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+
+</style>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<body>
+<center>
+<form onchange="myFunc();">
+<h3>CATEGORY II**  (Max Points:50)</h3>
+<br>
+<h3> Table 4:Co-Curricular Extra Curricular and Professional Development Related Activities</h3>   
+<p>(Performance Assessed by Head of Department #/Principal)</p>
+<table>
+  <tr>
+    <th>Sr.No </th>
+    <th>Performance  Indicator to be assessed</th>
+    <th> Excellent</th>
+    <th> Good </th>
+    <th> Satisfactory</th>
+
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Involvement in Cultural programmes/sports/extra-curricular activities etc</td>
+    <td><input type="radio" name="C2G1" class="e" value="Excellent"></td>
+    <td><input type="radio" name="C2G1" class="g" value="Good"></td>
+  <td><input type="radio" name="C2G1" class="s" value="Satisfactory"></td>
+
+  </tr>
+  <tr>
+    <td>2</td>
+    <td> Active Participation during Assembly</td>
+    <td><input type="radio" name="C2G2" class="e" value="Excellent"></td>
+    <td><input type="radio" name="C2G2" class="g" value="Good"></td>
+  <td><input type="radio" name="C2G2" class="s" value="Satisfactory"></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Participation in academic and Administrative work (Institute level)</td>
+    <td><input type="radio" name="C2G3" class="e" value="Excellent"></td>
+    <td><input type="radio" name="C2G3" class="g" value="Good"></td>
+  <td><input type="radio" name="C2G3" class ="s" value="Satisfactory"></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Participation in academic and Administrative work (Department level)</td>
+    <td><input type="radio" name="C2G4" class="e" value="Excellent"></td>
+    <td><input type="radio" name="C2G4" class="g" value="Good"></td>
+  <td><input type="radio" name="C2G4" class="s" value="Satisfactory"></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Involvement in organizing seminars/workshops/conferences/STTP etc</td>
+    <td><input type="radio" name="C2G5" class="e" value="Excellent"></td>
+    <td><input type="radio" name="C2G5" class="g" value="Good"></td>
+  <td><input type="radio" name="C2G5" class="s" value="Satisfactory"></td>
+  </tr>
+  
+</table>
+<br>
+<h3> Final Assessment from Table 4:</h3>
+<br>
+<table>
+  <tr>
+  <th> </th>
+  <th> </th>
+  <th> Number of tick marks</th>
+  <th> Multiplication Factor</th>
+  <th> Number of tick marks*Multiplication factor</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Excellent</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="te" readonly></textarea></td>
+
+    <td>10.0</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="pe" readonly></textarea></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td> Good</td>
+  <td><textarea onkeyup="AutoGrowTextArea(this)" id="tg" readonly></textarea></td>
+  
+    <td> 8.0</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="pg" readonly></textarea></td>
+    
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Satisfactory</td>
+  <td><textarea onkeyup="AutoGrowTextArea(this)" id="ts" readonly></textarea></td>
+    
+  <td>4.0 </td>
+    
+  <td><textarea onkeyup="AutoGrowTextArea(this)" id="ps" readonly></textarea></td>
+    </tr>
+  <tr>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td>Total</td>
+  <td><textarea onkeyup="AutoGrowTextArea(this)" id="total"></textarea></td>
+</table>
+<br>
+<br>
+<input type="button" name="SubmitButton" value="Submit" onclick="ValidateForm(this.form)">
+<input type="reset" value="Reset">
+<p id="para"></p>
+
+</form>
+</center>
+<br>
+<h6>
+Note # For HOD next immediate senior faculty will do the evaluation.
+   <br>
+     * Not applicable for staff deputed for higher studies.
+   <br>
+   ** Evaluation of this category is not applicable for staff deputed for higher studies.</h6>
+</body>
+
+<script type="text/javascript">
+
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+
+function ValidateForm(form){
+ErrorText= "";
+if ( ( form.C2G1[0].checked == false ) && ( form.C2G1[1].checked == false ) && ( form.C2G1[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.C2G2[0].checked == false ) && ( form.C2G2[1].checked == false ) && ( form.C2G2[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.C2G3[0].checked == false ) && ( form.C2G3[1].checked == false ) && ( form.C2G3[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.C2G4[0].checked == false ) && ( form.C2G4[1].checked == false ) && ( form.C2G4[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.C2G5[0].checked == false ) && ( form.C2G5[1].checked == false ) && ( form.C2G5[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else{ 
+  var xhttp = new XMLHttpRequest();
+      var foo = $.parseJSON(xhttp.responseText);
+      var a=$('input[name=C2G1]:checked').val();
+      var b=$('input[name=C2G2]:checked').val();
+      var c=$('input[name=C2G3]:checked').val();
+      var d=$('input[name=C2G4]:checked').val();
+      var e=$('input[name=C2G5]:checked').val();
+      var Points = document.getElementById("total").value;
+
+       xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("para").innerHTML=this.responseText;
+    }
+  };
+  xhttp.open("GET", "cat2_submit.php?a="+a+"&b="+b+"&c="+c+"&d="+d+"&e="+e+"&p="+Points, true);
+  xhttp.send(); }
+}
+function myFunc(){
+  var tot=0;
+var counte = $("input:radio[class=e]:checked").length;
+var countg = $("input:radio[class=g]:checked").length;
+var counts = $("input:radio[class=s]:checked").length;
+ if (counts!=0 || countg!=0 || counte!=0)
+   {
+      document.getElementById("te").value=counte;
+      document.getElementById("tg").value=countg;
+      document.getElementById("ts").value=counts;
+      // document.getElementById("pe").value=counte*10;
+      // document.getElementById("pg").value=countg*8;
+      // document.getElementById("ps").value=counts*4;
+      // tot = counte*10 + countg*8 + counts*4;
+      // document.getElementById("total").value=tot;
+      var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var foo = $.parseJSON(xhttp.responseText);
+      document.getElementById("pe").value = foo[0];
+      document.getElementById("pg").value = foo[1];
+      document.getElementById("ps").value = foo[2];
+      document.getElementById("total").value = foo[3];
+    }
+  };
+  xhttp.open("GET", "eg2.php?counte="+counte+"&countg="+countg+"&counts="+counts, true);
+  xhttp.send();
+   }
+}
+</script>
+</html> 
+
