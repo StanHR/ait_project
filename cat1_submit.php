@@ -6,11 +6,8 @@ if(!$_SESSION['id']){
 	print("Please log into your account.");
 }
 else{
-	$id = $_SESSION['id'];
 	include("db_conn.php");
 	$teacher_id = $_SESSION['id'];
-
-	$teacher_id = $_GET[''];
 	$t2_lesson_planning =  $_GET[''];
 	$t2_effective_comm = $_GET[''];
 	$t2_class_control = $_GET[''];

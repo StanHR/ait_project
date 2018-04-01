@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 01, 2018 at 08:22 AM
+-- Generation Time: Apr 01, 2018 at 12:54 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -70,21 +70,95 @@ CREATE TABLE `cat2` (
 INSERT INTO `cat2` (`teacher_id`, `cultural_and_sports`, `assembly_participation`, `inst_academic_and_admin`, `dept_academic_and_admin`, `seminar_and_workshop`, `total_points`) VALUES
 ('harshit003', 'excellent', 'good', 'satisfactory', 'good', 'satisfactory', 32);
 
---
--- Indexes for dumped tables
---
+-- --------------------------------------------------------
 
 --
--- Indexes for table `cat1`
+-- Table structure for table `cat3_avgs`
 --
-ALTER TABLE `cat1`
-  ADD PRIMARY KEY (`teacher_id`);
+
+CREATE TABLE `cat3_avgs` (
+  `teacher_id` varchar(16) NOT NULL,
+  `t5_avg` int(6) NOT NULL,
+  `t5_points_achieved` int(6) NOT NULL,
+  `t6_points_achieved` int(6) NOT NULL,
+  `t7_avg` int(6) NOT NULL,
+  `t7_points_achieved` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
--- Indexes for table `cat2`
+-- Table structure for table `cat3_tab5`
 --
-ALTER TABLE `cat2`
-  ADD PRIMARY KEY (`teacher_id`);
+
+CREATE TABLE `cat3_tab5` (
+  `teacher_id` varchar(16) NOT NULL,
+  `class` varchar(32) NOT NULL,
+  `subject_taught` varchar(32) NOT NULL,
+  `students_present` int(6) NOT NULL,
+  `lectures_actually_engaged` int(6) NOT NULL,
+  `students_o_roll` int(6) NOT NULL,
+  `avg_attendance` int(6) NOT NULL,
+  `performance_per_subject` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cat3_tab6`
+--
+
+CREATE TABLE `cat3_tab6` (
+  `teacher_id` varchar(16) NOT NULL,
+  `class` varchar(32) NOT NULL,
+  `subject_taught` varchar(32) NOT NULL,
+  `institute_passing_percent` int(6) NOT NULL,
+  `current_passing_percent` int(6) NOT NULL,
+  `points_per_subject` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cat3_tab7`
+--
+
+CREATE TABLE `cat3_tab7` (
+  `teacher_id` varchar(16) NOT NULL,
+  `class` varchar(32) NOT NULL,
+  `subject_taught` varchar(32) NOT NULL,
+  `total_students` int(6) NOT NULL,
+  `review_excellent` int(6) NOT NULL,
+  `review_good` int(6) NOT NULL,
+  `review_satisfactory` int(6) NOT NULL,
+  `review_poor` int(6) NOT NULL,
+  `performance` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cat5`
+--
+
+CREATE TABLE `cat5` (
+  `teacher_id` varchar(16) NOT NULL,
+  `orientation_prog_duration` int(8) NOT NULL,
+  `orientation_prog_desc` varchar(250) NOT NULL,
+  `sttp_duration` int(8) NOT NULL,
+  `sttp_desc` varchar(250) NOT NULL,
+  `workshop_duration` int(16) NOT NULL,
+  `workshop_desc` varchar(250) NOT NULL,
+  `refresher_course_duration` int(16) NOT NULL,
+  `refresher_course_desc` varchar(250) NOT NULL,
+  `fdp_duration` int(16) NOT NULL,
+  `fdp_desc` varchar(250) NOT NULL,
+  `soft_skillsDP_duration` int(16) NOT NULL,
+  `soft_skillsDP_desc` varchar(250) NOT NULL,
+  `seminars_duration` int(16) NOT NULL,
+  `seminars_desc` varchar(250) NOT NULL,
+  `points_achieved` int(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

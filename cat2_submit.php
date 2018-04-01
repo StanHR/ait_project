@@ -9,7 +9,6 @@ else{
 	$id = $_SESSION['id'];
 	include("db_conn.php");
 	$teacher_id = $_SESSION['id'];
-	//test data begins
 	$cultural_and_sports = $_GET['a'];
 	$assembly_participationn = $_GET['b'];
 	$inst_academic_and_admin = $_GET['c'];
