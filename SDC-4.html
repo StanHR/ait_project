@@ -7,7 +7,7 @@
         resize: none;
 	width:100% !important;
         border: none;
-        height:100% !important;
+        height:auto;
 }
 	table {
 	 width:100%;
@@ -28,25 +28,19 @@ table td.expand {
 }
 </style>
 </head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <body>
-  <form method="post" action="/stack" onchange="myFunction();">
 <center>
 <h3>Supporting document for category - IV</h3>
 <h4>Refereed Journal</h4>
 
- <div onchange="myFunc2();"><table style="width:100%">
+ <table style="width:100%">
   <tr>
     <th>Title of paper</th>
     <th>Details of Publication</th>
   </tr>
   <tr>
-    <td><input type="text" name="rjt[]" /></td>
-    <td><input type="text" name="rjd[]" /></td>
-  </tr>
-  <tr>
-    <td><input type="text" name="rjt[]" /></td>
-    <td><input type="text" name="rjd[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
   </tr>
 </table> 
 <br>
@@ -57,12 +51,8 @@ table td.expand {
     <th>Details of Publication</th>
   </tr>
   <tr>
-    <td><input type="text" name="nt[]" /></td>
-    <td><input type="text" name="nd[]" /></td>
-  </tr>
-  <tr>
-    <td><input type="text" name="nt[]" /></td>
-    <td><input type="text" name="nd[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
   </tr>
 </table>
 <br>
@@ -73,12 +63,8 @@ table td.expand {
     <th>Details of Publication</th>
   </tr>
   <tr>
-    <td><input type="text" name="cit[]" /></td>
-    <td><input type="text" name="cid[]" /></td>
-  </tr>
-  <tr>
-    <td><input type="text" name="cit[]" /></td>
-    <td><input type="text" name="cid[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
   </tr>
 </table>
 <br>
@@ -89,33 +75,12 @@ table td.expand {
     <th>Details of Publication</th>
   </tr>
   <tr>
-    <td><input type="text" name="cnt[]" /></td>
-    <td><input type="text" name="cnd[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
   </tr>
-  <tr>
-    <td><input type="text" name="cnt[]" /></td>
-    <td><input type="text" name="cnd[]" /></td>
-  </tr>
-</table></div>
+</table>
 </center>
-<center><b><u>CATEGORY :IV</u></center>
-<label>Table8: R&D Performance-Paper Published/Presented</b></label>
-<table>
-<tr>
-<th>Reference Journal</th>
-<th>Non-Refered Journal with ISBN/ISSN numbers</th>
-<th><table><tr><th colspan="2">Conference Preceeding as full paper</th></tr><tr><th>International</th><th>National</th></tr></table>
-</tr>
-<tr>
-<th>A</th><th>B</th><th>C</th>
-<tr>
-<th><textarea id="numb1" type="number"></textarea></th>
-<th><textarea id="numb2" type="number"></textarea></th>
-<th><table><tr><td><textarea id="numb3" type="number"></textarea></td><td><textarea id="numb4" type="number"></textarea></td></tr><table></th></tr><tr></table></tr></table></div>
-
-  <p>Points acheived for Category IV :<input type="text" name="ans" id="ans" readonly /></p>
-</center>
-</div></form></body>
+</body>
 <script type="text/javascript">
 function AutoGrowTextArea(textField)
 {
@@ -129,91 +94,5 @@ function AutoGrowTextArea(textField)
     }
   }
 }
-function myFunction() {
-    x1 = document.getElementById("numb1").value;
-    x2 = document.getElementById("numb2").value;
-    x3 = document.getElementById("numb3").value;
-    x4 = document.getElementById("numb4").value;
-   if(x1!='' && (x1<0 || isNaN(x1)==true)){
-      alert("enter valid count of Reference Journal");
-   }
-   if(x2!='' && (x2<0 || isNaN(x2)==true)){
-      alert("enter valid count of Non-Refered Journal");
-   }
-   if(x3!='' && (x3<0 || isNaN(x3)==true)){
-      alert("enter valid count of international paper Presented");
-   }
-   if(x4!='' && (x4<0 || isNaN(x4)==true)){
-      alert("enter valid count of national paper Presented");
-   }
-  //  var xhttp = new XMLHttpRequest();
-  // xhttp.onreadystatechange = function() {
-  //   if (this.readyState == 4 && this.status == 200) {
-  //    document.getElementById("ans").value = this.responseText;
-  //   }
-  // };
-  // xhttp.open("GET", "eg.php?x1="+x1+"&x2="+x2+"&x3="+x3+"&x4="+x4, true);
-  // xhttp.send();
-  }
-  function myFunc2(){
-  var t = $('input[name^=rjt]').map(function(idx, elem) {
-    return $(elem).val(); 
-  }).get();
-  var e = $('input[name^=nt]').map(function(idx, elem) {
-    return $(elem).val(); 
-  }).get();
-  var m = $('input[name^=cit]').map(function(idx, elem) {
-    return $(elem).val(); 
-  }).get();
-  var n = $('input[name^=cnt]').map(function(idx, elem) {
-    return $(elem).val(); 
-  }).get();
-  // console.log(t,e,m,n);
-  var j,co,co2,co3,co4,points;
-  j=0;
-  co=0;
-  co2=0;
-  co3=0;
-  co4=0;
-  points=0;
-  while(t[j]!="" && j<=1){
-    co++;
-    j++;
-  }
-  j=0;
-  while(e[j]!="" && j<=1){
-    co2++;
-    j++;
-  }
-  j=0;
-  while(m[j]!="" && j<=1){
-    co3++;
-    j++;
-  }
-  j=0;
-  while(n[j]!="" && j<=1){
-    co4++;
-    j++;
-  }
-  // console.log(co,co2,co3,co4);
-  if (co!=0) {
-    document.getElementById("numb1").value = co;
-    points = points + 15*co;
-  }
-  if (co2!=0) {
-    document.getElementById("numb2").value = co2;
-    points = points + 10*co2;
-  }
-  if (co3!=0) {
-    document.getElementById("numb3").value = co3;
-    // points = points + 10*co2;
-  }
-  if (co4!=0) {
-    document.getElementById("numb4").value = co4;
-    // points = points + 10*co2;
-  }
-  points = points + 10*(co3+co4);
-document.getElementById("ans").value = points;
-  }
 </script>
 </html> 

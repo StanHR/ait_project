@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>category3</title>
+<style type="text/css">
+	textarea {
+        resize: none;
+	width:100% !important;
+        border: none;
+        height:auto;
+}
+	table {
+	 width:100%;
+	 border:2px solid;
+	border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+</style>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="Easy-Numeric-Input-Plugin-jQuery-numeric-js/jquery.numeric.js"></script> -->
+
+<body>
+<center>
+<h3>Category III</h3>
+<h4>Table 5 : Performance of attendance of Students</h4>
+<form method="post" action="/stack" onchange="myFunction();">
+ <table style="width:100%">
+  <tr>
+    <th>Sr.No</th>
+    <th>Class/Course</th>
+    <th>Subjects taught</th>
+    <th>Sum of Students present</th>
+	<th>Lectures actually engaged</th>
+    <th>Students o roll</th>
+    <th>Average attendance (col4x100)/(col5xcol6)</th>
+	<th>Performance and Multiplying factors</th>
+    <th>Performance per subject</th>
+    <th>Average of col 9</th>
+	<th>Points Achieved</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+	<td>5</td>
+    <td>6</td>
+    <td>7</td>
+	<td>8</td>
+    <td>9</td>
+    <td>10</td>
+	<td>11</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n1" type="number"></textarea></td>
+	<td><textarea id="n2" type="number"></textarea></td>
+    <td><textarea id="n3" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td rowspan="4">*Excellent-1.0(100-81) *good-0.8(80-61) *satisfactory-0.6(60-41) *poor-0.4(40-00)</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n4" type="number"></textarea></td>
+	<td><textarea id="n5" type="number"></textarea></td>
+    <td><textarea id="n6" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	</tr>
+  <tr>
+    <td>3</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n7" type="number"></textarea></td>
+	<td><textarea id="n8" type="number"></textarea></td>
+    <td><textarea id="n9" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    </tr>
+  <tr>
+    <td>4</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n10" type="number"></textarea></td>
+	<td><textarea id="n11" type="number"></textarea></td>
+    <td><textarea id="n12" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+</table>
+<br><br>
+<h4>Table 6 : Performance of Results(Theory Subjects)<br>(Self Assessment)</h4>
+<br> 
+<table style = "width : 100%">
+  <tr>
+    <th>Sr.No</th>
+    <th>Class/Course</th>
+    <th>Subjects taught</th>
+    <th>Average result passing% of same subject for 1-3 years in Institute</th>
+	<th>Current Passing %</th>
+    <th style= "width :25%">Performance</th>
+    <th>Points Achieved per subject</th>
+	<th>Points Achieved (Avg of col 7)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+	<td>5</td>
+    <td>6</td>
+    <td>7</td>
+	<td>8</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n13" type="number"></textarea></td>
+	<td><textarea id="n14" type="number"></textarea></td>
+	<td rowspan="4">For col(4)>=95%<br>*if col(5)> col(4) Then col(7)=10<br>*if col(4)-col(5)<= Then col(6)=08<br>*if 5<= col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05<br>for col(4)<=95%<br>*if col(5)-col(4)>=2 Then col(7)=10<br>*if |col(5)-col(4)|>=2 then col(7)=08<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td></tr>
+  <tr>
+    <td>2</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n15" type="number"></textarea></td>
+	<td><textarea id="n16" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+   </tr>
+  <tr>
+    <td>3</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n17" type="number"></textarea></td>
+	<td><textarea id="n18" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    </tr>
+  <tr>
+    <td>4</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n19" type="number"></textarea></td>
+	<td><textarea id="n20" type="number"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+</table>
+<br><br>
+<h4>Table 7: Students Assessment based on overall effectiveness of teaching(Max. Points :10)</h4>
+<br>
+ <table style="width:100%">
+   <tr>
+    <th rowspan="2">Sr.No</th>
+    <th rowspan="2">Class/Course</th>
+    <th rowspan="2">Subjects taught</th>
+    <th rowspan="2">Total no. of Students in class</th>
+	<th colspan="4">No. of Students say</th>
+    <th rowspan="2">Performance <br>[col(5)+0.8xcol(6)+0.6xcol(7)+0.4xcol(8)]+col(4)</th>
+    <th rowspan="2">Average of col(9)</th>
+	<th rowspan="2">Points achieved 10xcol(10)</th>
+  </tr>
+    <tr>
+    <td>Excellent</td>
+    <td>Good</td>
+    <td>Satisfactory</td>
+    <td>Poor</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+	<td>5</td>
+    <td>6</td>
+    <td>7</td>
+	<td>8</td>
+    <td>9</td>
+    <td>10</td>
+	<td>11</td>
+  </tr>
+    <tr>
+    <td>1</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n21" type="number"></textarea></td>
+	<td><textarea id="n22" type="number"></textarea></td>
+	<td><textarea id="n23" type="number"></textarea></td>
+	<td><textarea id="n24" type="number"></textarea></td>
+	<td><textarea id="n25" type="number"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	</tr>
+	  <tr>
+    <td>2</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n26" type="number"></textarea></td>
+	<td><textarea id="n27" type="number"></textarea></td>
+	<td><textarea id="n28" type="number"></textarea></td>
+	<td><textarea id="n29" type="number"></textarea></td>
+	<td><textarea id="n30" type="number"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	</tr>
+	  <tr>
+    <td>3</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n31" type="number"></textarea></td>
+	<td><textarea id="n32" type="number"></textarea></td>
+	<td><textarea id="n33" type="number"></textarea></td>
+	<td><textarea id="n34" type="number"></textarea></td>
+	<td><textarea id="n35" type="number"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	</tr>
+	  <tr>
+    <td>4</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea id="n36" type="number"></textarea></td>
+	<td><textarea id="n37" type="number"></textarea></td>
+	<td><textarea id="n38" type="number"></textarea></td>
+	<td><textarea id="n39" type="number"></textarea></td>
+	<td><textarea id="n40" type="number"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	</tr>
+ </table>
+ <br>
+ <input type="button" name="SubmitButton" value="Submit" onClick= "myFunction()" >
+</form>
+</center>
+</body>
+
+
+<script type="text/javascript">
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+
+function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x1 = document.getElementById("n1").value;
+    x2 = document.getElementById("n2").value;
+    x3 = document.getElementById("n3").value;
+    x4 = document.getElementById("n4").value;
+	x5 = document.getElementById("n5").value;
+    x6 = document.getElementById("n6").value;
+    x7 = document.getElementById("n7").value;
+    x8 = document.getElementById("n8").value;
+	x9 = document.getElementById("n9").value;
+    x10 = document.getElementById("n10").value;
+	x11 = document.getElementById("n11").value;
+    x12 = document.getElementById("n12").value;
+    x13 = document.getElementById("n13").value;
+    x14 = document.getElementById("n14").value;
+	x15 = document.getElementById("n15").value;
+    x16 = document.getElementById("n16").value;
+    x17 = document.getElementById("n17").value;
+    x18 = document.getElementById("n18").value;
+	x19 = document.getElementById("n19").value;
+    x20 = document.getElementById("n20").value;
+	x21 = document.getElementById("n21").value;
+    x22 = document.getElementById("n22").value;
+    x23 = document.getElementById("n23").value;
+    x24 = document.getElementById("n24").value;
+	x25 = document.getElementById("n25").value;
+    x26 = document.getElementById("n26").value;
+    x27 = document.getElementById("n27").value;
+    x28 = document.getElementById("n28").value;
+	x29 = document.getElementById("n29").value;
+    x30 = document.getElementById("n30").value;
+	x31 = document.getElementById("n31").value;
+    x32 = document.getElementById("n32").value;
+    x33 = document.getElementById("n33").value;
+    x34 = document.getElementById("n34").value;
+	x35 = document.getElementById("n35").value;
+    x36 = document.getElementById("n36").value;
+    x37 = document.getElementById("n37").value;
+    x38 = document.getElementById("n38").value;
+	x39 = document.getElementById("n39").value;
+    x40 = document.getElementById("n40").value;
+   if(x1!='' && (x1<0 || isNaN(x1)==true)){
+      alert("enter valid count ");
+   }
+   if(x2!='' && (x2<0 || isNaN(x2)==true)){
+      alert("enter valid count ");
+   }
+   if(x3!='' && (x3<0 || isNaN(x3)==true)){
+      alert("enter valid count  ");
+   }
+   if(x4!='' && (x4<0 || isNaN(x4)==true)){
+      alert("enter valid count ");
+   }
+   if(x5!='' && (x5<0 || isNaN(x5)==true)){
+      alert("enter valid count ");
+   }
+   if(x6!='' && (x6<0 || isNaN(x6)==true)){
+      alert("enter valid count ");
+   }
+   if(x7!='' && (x7<0 || isNaN(x7)==true)){
+      alert("enter valid count ");
+   }
+   if(x8!='' && (x8<0 || isNaN(x8)==true)){
+      alert("enter valid count ");
+   }
+   if(x9!='' && (x9<0 || isNaN(x9)==true)){
+      alert("enter valid count ");
+   }
+   if(x10!='' && (x10<0 || isNaN(x10)==true)){
+      alert("enter valid count");
+   }
+   if(x11!='' && (x11<0 || isNaN(x11)==true)){
+      alert("enter valid count ");
+   }
+   if(x12!='' && (x2<0 || isNaN(x12)==true)){
+      alert("enter valid count ");
+   }
+   if(x13!='' && (x3<0 || isNaN(x13)==true)){
+      alert("enter valid count  ");
+   }
+   if(x14!='' && (x4<0 || isNaN(x14)==true)){
+      alert("enter valid count ");
+   }
+   if(x15!='' && (x5<0 || isNaN(x15)==true)){
+      alert("enter valid count ");
+   }
+   if(x16!='' && (x6<0 || isNaN(x16)==true)){
+      alert("enter valid count ");
+   }
+   if(x17!='' && (x7<0 || isNaN(x17)==true)){
+      alert("enter valid count ");
+   }
+   if(x18!='' && (x8<0 || isNaN(x18)==true)){
+      alert("enter valid count ");
+   }
+   if(x19!='' && (x9<0 || isNaN(x19)==true)){
+      alert("enter valid count ");
+   }
+   if(x20!='' && (x10<0 || isNaN(x20)==true)){
+      alert("enter valid count");
+   }
+   if(x21!='' && (x1<0 || isNaN(x21)==true)){
+      alert("enter valid count ");
+   }
+   if(x22!='' && (x2<0 || isNaN(x22)==true)){
+      alert("enter valid count ");
+   }
+   if(x23!='' && (x3<0 || isNaN(x23)==true)){
+      alert("enter valid count  ");
+   }
+   if(x24!='' && (x4<0 || isNaN(x24)==true)){
+      alert("enter valid count ");
+   }
+   if(x25!='' && (x5<0 || isNaN(x25)==true)){
+      alert("enter valid count ");
+   }
+   if(x26!='' && (x6<0 || isNaN(x26)==true)){
+      alert("enter valid count ");
+   }
+   if(x27!='' && (x7<0 || isNaN(x27)==true)){
+      alert("enter valid count ");
+   }
+   if(x28!='' && (x8<0 || isNaN(x28)==true)){
+      alert("enter valid count ");
+   }
+   if(x29!='' && (x9<0 || isNaN(x29)==true)){
+      alert("enter valid count ");
+   }
+   if(x30!='' && (x10<0 || isNaN(x30)==true)){
+      alert("enter valid count");
+   }
+   if(x31!='' && (x1<0 || isNaN(x31)==true)){
+      alert("enter valid count ");
+   }
+   if(x32!='' && (x2<0 || isNaN(x32)==true)){
+      alert("enter valid count ");
+   }
+   if(x33!='' && (x3<0 || isNaN(x33)==true)){
+      alert("enter valid count  ");
+   }
+   if(x34!='' && (x4<0 || isNaN(x34)==true)){
+      alert("enter valid count ");
+   }
+   if(x35!='' && (x5<0 || isNaN(x35)==true)){
+      alert("enter valid count ");
+   }
+   if(x36!='' && (x6<0 || isNaN(x36)==true)){
+      alert("enter valid count ");
+   }
+   if(x37!='' && (x7<0 || isNaN(x37)==true)){
+      alert("enter valid count ");
+   }
+   if(x38!='' && (x8<0 || isNaN(x38)==true)){
+      alert("enter valid count ");
+   }
+   if(x39!='' && (x9<0 || isNaN(x39)==true)){
+      alert("enter valid count ");
+   }
+   if(x40!='' && (x10<0 || isNaN(x40)==true)){
+      alert("enter valid count");
+   }
+   
+  }
+
+</script>
+</html> 
