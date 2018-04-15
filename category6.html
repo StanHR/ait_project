@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>category6</title>
+<style type="text/css">
+	textarea {
+        resize: none;
+	width:100% !important;
+        border: none;
+        height:auto;
+}
+	table {
+	 width:100%;
+	 border:2px solid;
+	border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+</style>
+</head>
+<body>
+<center>
+<h3>Category : VI (3 years record)</h3>
+<h3>Special Achievements</h3>
+
+ <table style="width:100%">
+  <tr>
+    <th>Sr.No</th>
+    <th style="width:40%">Achievements</th>
+    <th>Description</th>
+    <th>Remark</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>Books, Chapter in books published(National/Internationsl)</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>Funded research/sponsored consultancy projects carried out or ongoing internal/external as per AICTE norms</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>Research guidance <br><br>M.E, M.Pil, Ph.D.</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>Position held in UNIV/national/international bodies.(Mention only if it is as perAICTE norms)</td>
+   <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>Invited talks/Chairperson/reviewer/in technicalsymposia/conference(Natonal/International)</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>Subjects expert in interview panel</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>Participations in University/Reputed Institute related activites</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+</table> 
+</center>
+</body>
+
+
+<script type="text/javascript">
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+</script>
+</html> 

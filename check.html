@@ -1,0 +1,91 @@
+<html>
+<head>
+<script LANGUAGE="JavaScript">
+function ValidateForm(form){
+ErrorText= "";
+if ( ( form.Grade1[0].checked == false ) && ( form.Grade1[1].checked == false ) && ( form.Grade1[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.Grade2[0].checked == false ) && ( form.Grade2[1].checked == false ) && ( form.Grade2[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.Grade3[0].checked == false ) && ( form.Grade3[1].checked == false ) && ( form.Grade3[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.Grade4[0].checked == false ) && ( form.Grade4[1].checked == false ) && ( form.Grade4[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+else if ( ( form.Grade5[0].checked == false ) && ( form.Grade5[1].checked == false ) && ( form.Grade5[2].checked == false ))
+{
+alert ( "Please complete the form" ); 
+return false;
+}
+if (ErrorText= "") { form.submit() }
+}
+</script>
+</head>
+<body>
+<form name="feedback" action="#" method=post>
+
+<table>
+  <tr>
+    <th>Sr.No </th>
+    <th>Performance  Indicator to be assessed</th>
+    <th> Excellent</th>
+    <th> Good </th>
+    <th> Satisfactory</th>
+
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Checking of Journals and making continuous assessment of term-work/assignment</td>
+    <td><input type="radio" name="Grade1" value="Excellent"><td>
+    <td><input type="radio" name="Grade1" value="Good"></td>
+	<td><input type="radio" name="Grade1" value="Satisfactory"></td>
+
+  </tr>
+  <tr>
+    <td>2</td>
+    <td> Record keeping of students profile</td>
+    <td><input type="radio" name="Grade2" value="Excellent"><td>
+    <td><input type="radio" name="Grade2" value="Good"></td>
+	<td><input type="radio" name="Grade2" value="Satisfactory"></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Conduction of Practical/oral Exams</td>
+    <td><input type="radio" name="Grade3" value="Excellent"><td>
+    <td><input type="radio" name="Grade3" value="Good"></td>
+	<td><input type="radio" name="Grade3" value="Satisfactory"></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Assessment of Answer books</td>
+    <td><input type="radio" name="Grade4" value="Excellent"><td>
+    <td><input type="radio" name="Grade4" value="Good"></td>
+	<td><input type="radio" name="Grade4" value="Satisfactory"></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Invigilation/Conduction of exams</td>
+    <td><input type="radio" name="Grade5" value="Excellent"><td>
+    <td><input type="radio" name="Grade5" value="Good"></td>
+	<td><input type="radio" name="Grade5" value="Satisfactory"></td>
+  </tr>
+  
+</table>
+
+<input type="button" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)">
+<input type="reset" value="Reset">
+
+</form>
+</body>
+</html>

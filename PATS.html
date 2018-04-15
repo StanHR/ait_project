@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Performance Appraisal for Teaching Staff</title>
+<style type="text/css">
+	textarea {
+        resize: none;
+	width:100% !important;
+        border: none;
+        height:auto;
+}
+	table {
+	 width:100%;
+	 border:2px solid;
+	border-collapse: collapse;
+}
+td {
+    border: 2px solid;
+}
+th {
+    border: 2px solid;
+}
+table td.shrink {
+    white-space:nowrap
+}
+table td.expand {
+    width: 99%
+}
+</style>
+</head>
+<body>
+<center>
+<h3>Performance Appraisal for Teaching Staff</h3>
+<h4>Final Assessment</h4>
+
+ <table style="width:100%">
+  <tr>
+    <th colspan="2">Performance Indicator</th>
+    <th>Point Obtained</th>
+    <th>Max.Points</th>
+  </tr>
+  <tr>
+    <td rowspan="3">Category I</td>
+    <td>Percentage of Lecures engaged</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>60</td>
+  </tr>
+  <tr>
+    <td>Teaching and Learning related activities</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>Evaluation and Examination related activities</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Category II</td>
+    <td>Co-Curricular Extra Curricular and Performance Development Related activities</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Category III</td>
+    <td>Average Attendance of students</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>05</td>
+  </tr>
+  <tr>
+    <td>Results</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Student Feedback</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td>10</td>
+  </tr>
+</table> 
+<table style="width:100%">
+  <tr>
+    <th rowspan="2">Total points in words : (For Category I, II, III)</th>
+    <th style width=32.8%>Total</th>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<th style width=9.5%>200</th>
+  </tr>
+  <tr>
+	<th>Percentage</th>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+ </table>
+ <table>
+	<tr>
+	<th colspan="2"></th>
+	<th>Points Obtained</th>
+	</tr>
+   <tr>
+    <td>Category IV</td>
+    <td>R & D Performance - Paper Published / Presented</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+     <tr>
+    <td>Category V</td>
+    <td>Training Courses</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+     <tr>
+    <td>Category VI</td>
+    <td>Special Achievements</td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+  </tr>
+ </table>
+ <br><br>
+ </center>
+ <form>
+   Remarks:
+  <input type="text" name="Remarks"><br><br>
+  Grade:
+  <input type="text" name="Grade">
+  Place:
+  <input type="text" name="Place">
+  Date:
+  <input type="text" name="Date"><br><br>
+
+<p>Remarks of the verifing officer :</p>
+<label class="container">
+	<input type="checkbox" checked="checked">
+	<span class="checkmark"></span>
+  I agree with the assessment of the Reporting officers
+</label><br>
+
+<label class="container">
+	<input type="checkbox">
+	<span class="checkmark"></span>
+  I, for the following reasons change the grade given by the Reporting Officer
+</label>
+<br><br>
+   Reasons:
+  <input type="text" name="Reasons"><br><br>
+   Place:
+  <input type="text" name="Place1">
+   Date:
+  <input type="text" name="Date1"><br><br>
+</form>
+</body>
+
+<script type="text/javascript">
+function AutoGrowTextArea(textField)
+{
+  if (textField.clientHeight < textField.scrollHeight)
+  {
+    textField.style.height = textField.scrollHeight + "px";
+    if (textField.clientHeight < textField.scrollHeight)
+    {
+      textField.style.height = 
+        (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+    }
+  }
+}
+</script>
+</html> 
