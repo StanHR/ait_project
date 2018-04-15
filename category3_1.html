@@ -62,7 +62,7 @@ table td.expand {
     <td>2</td>
     <td>3</td>
     <td>4</td>
-	<td>5</td>
+	  <td>5</td>
     <td>6</td>
     <td>7</td>
 	<td>8</td>
@@ -72,8 +72,8 @@ table td.expand {
   </tr>
   <tr>
     <td>1</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class1[]"></td>
+    <td><input type="text" name="subject1[]"></td>
     <td><input type="text" id="n1" name="sp[]"></td>
 	<td><input type="text" id="n2" name="le[]"></td>
     <td><input type="text" id="n3" name="sr[]"></td>
@@ -81,12 +81,12 @@ table td.expand {
 	<td rowspan="4">*Excellent-1.0(100-81)<br> *good-0.8(80-61)<br> *satisfactory-0.6(60-41)<br> *poor-0.4(40-00)</td>
     <td><textarea onkeyup="AutoGrowTextArea(this)" id="avg1"></textarea></td>
     <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)" id="final"></textarea></td>
-	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+	<td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)" id="p1"></textarea></td>
   </tr>
   <tr>
     <td>2</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class1[]"></td>
+    <td><input type="text" name="subject1[]"></td>
     <td><input type="text" id="n4" name="sp[]"></td>
 	<td><input type="text" id="n5" name="le[]"></td>
     <td><input type="text" id="n6" name="sr[]"></td>
@@ -95,8 +95,8 @@ table td.expand {
 	</tr>
   <tr>
     <td>3</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class1[]"></textarea></td>
+    <td><input type="text" name="subject1[]"></textarea></td>
     <td><input type="text" id="n7" name="sp[]"></td>
 	<td><input type="text" id="n8" name="le[]"></td>
     <td><input type="text" id="n9" name="sr[]"></td>
@@ -105,8 +105,8 @@ table td.expand {
     </tr>
   <tr>
     <td>4</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" id="n1" name="class1[]"></textarea></td>
+    <td><input type="text" name="subject1[]"></textarea></td>
     <td><input type="text" id="n10" name="sp[]"></td>
 	<td><input type="text" id="n11" name="le[]"></td>
     <td><input type="text" id="n12" name="sr[]"></td>
@@ -141,36 +141,36 @@ table td.expand {
   </tr>
   <tr>
     <td>1</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class2[]" /></td>
+    <td><input type="text" name="subject2[]" /></td>
     <td><input type="text" id="n13" name="av[]" /></td>
 	<td><input type="text" id="n14" name="cu[]" /></td>
 	<td rowspan="4">For col(4)>=95%<br>*if col(5)> col(4) Then col(7)=10<br>*if col(4)-col(5)<= Then col(6)=08<br>*if 5<= col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05<br>for col(4)<=95%<br>*if col(5)-col(4)>=2 Then col(7)=10<br>*if |col(5)-col(4)|>=2 then col(7)=08<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject1"></textarea></td>
-    <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td></tr>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj1"></textarea></td>
+    <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)" id="p2"></textarea></td></tr>
   <tr>
     <td>2</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class2[]" /></td>
+    <td><input type="text" name="subject2[]" /></td>
     <td><input type="text" id="n15" name="av[]" /></td>
 	<td><input type="text" id="n16" name="cu[]" /></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject2"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj2"></textarea></td>
    </tr>
   <tr>
     <td>3</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><input type="text" id="n17" name="av[]" /><textarea id="n17" type="number"></textarea></td>
-	<td><input type="text" id="n18" name="cu[]" /><textarea id="n18" type="number"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject3"></textarea></td>
+    <td><input type="text" name="class2[]" /></textarea></td>
+    <td><input type="text" name="subject2[]" /></td>
+    <td><input type="text" id="n17" name="av[]" /></td>
+	<td><input type="text" id="n18" name="cu[]" /></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj3"></textarea></td>
     </tr>
   <tr>
     <td>4</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class2[]" /></td>
+    <td><input type="text" name="subject2[]" /></td>
     <td><input type="text" id="n19" name="av[]" /></td>
 	<td><input type="text" id="n20" name="cu[]" /></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subject4"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj4"></textarea></td>
   </tr>
 </table></div>
 <br><br>
@@ -209,12 +209,12 @@ table td.expand {
   </tr>
     <tr>
     <td>1</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class3[]" /></td>
+    <td><input type="text" name="subject3[]" /></td>
     <td><input type="text" id="n21" name="t[]" /></td>
 	<td><input type="text" id="n22" name="e[]" /></td>
 	<td><input type="text" id="n23" name="g[]" /></td>
-	<td><input type="text" id="n24" name="s[]" /></td>
+	<td><input type="text" id="n24" name="Satisfactory[]" /></td>
 	<td><input type="text" id="n25" name="p[]" /></td>
 	<td><input type="text" id="total1" onkeyup="AutoGrowTextArea(this)" /></td>
 	<td rowspan="4"><textarea id="avg" onkeyup="AutoGrowTextArea(this)"></textarea></td>
@@ -222,34 +222,34 @@ table td.expand {
 	</tr>
 	  <tr>
     <td>2</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class3[]" /></td>
+    <td><input type="text" name="subject3[]" /></td>
     <td><input type="text" id="n26" name="t[]" /></td>
 	<td><input type="text" id="n27" name="e[]" /></td>
 	<td><input type="text" id="n28" name="g[]" /></td>
-	<td><input type="text" id="n29" name="s[]" /></td>
+	<td><input type="text" id="n29" name="Satisfactory[]" /></td>
 	<td><input type="text" id="n30" name="p[]" /></td>
 	<td><input type="text" onkeyup="AutoGrowTextArea(this)" id="total2" /></td>
 	</tr>
 	  <tr>
     <td>3</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class3[]" /></td>
+    <td><input type="text" name="subject3[]" /></td>
     <td><input type="text" id="n31" name="t[]" /></td>
 	<td><input type="text" id="n32" name="e[]" /></td>
 	<td><input type="text" id="n33" name="g[]" /></td>
-	<td><input type="text" id="n34" name="s[]" /></td>
+	<td><input type="text" id="n34" name="Satisfactory[]" /></td>
 	<td><input type="text" id="n35" name="p[]" /></td>
 	<td><input type="text" onkeyup="AutoGrowTextArea(this)" id="total3" /></td>
 	</tr>
 	  <tr>
     <td>4</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)"></textarea></td>
+    <td><input type="text" name="class3[]" /></td>
+    <td><input type="text" name="subject3[]" /></td>
     <td><input type="text" id="n36" name="t[]" /></td>
 	<td><input type="text" id="n37" name="e[]" /></td>
 	<td><input type="text" id="n38" name="g[]" /></td>
-	<td><input type="text" id="n39" name="s[]" /></td>
+	<td><input type="text" id="n39" name="Satisfactory[]" /></td>
 	<td><input type="text" id="n40" name="p[]" /></td>
 	<td><input type="text" onkeyup="AutoGrowTextArea(this)" id="total4" /></td>
 	</tr>
@@ -257,6 +257,7 @@ table td.expand {
  <br>
  <input type="button" name="SubmitButton" value="Submit" onClick= "myFunction()" >
 </form>
+<p id="result"></p>
 </center>
 </body>
 
@@ -322,125 +323,227 @@ function myFunction() {
    if(x1!='' && (x1<0 || isNaN(x1)==true)){
       alert("enter valid count ");
    }
-   if(x2!='' && (x2<0 || isNaN(x2)==true)){
+   else if(x2!='' && (x2<0 || isNaN(x2)==true)){
       alert("enter valid count ");
    }
-   if(x3!='' && (x3<0 || isNaN(x3)==true)){
+   else if(x3!='' && (x3<0 || isNaN(x3)==true)){
       alert("enter valid count  ");
    }
-   if(x4!='' && (x4<0 || isNaN(x4)==true)){
+   else if(x4!='' && (x4<0 || isNaN(x4)==true)){
       alert("enter valid count ");
    }
-   if(x5!='' && (x5<0 || isNaN(x5)==true)){
+   else if(x5!='' && (x5<0 || isNaN(x5)==true)){
       alert("enter valid count ");
    }
-   if(x6!='' && (x6<0 || isNaN(x6)==true)){
+   else if(x6!='' && (x6<0 || isNaN(x6)==true)){
       alert("enter valid count ");
    }
-   if(x7!='' && (x7<0 || isNaN(x7)==true)){
+   else if(x7!='' && (x7<0 || isNaN(x7)==true)){
       alert("enter valid count ");
    }
-   if(x8!='' && (x8<0 || isNaN(x8)==true)){
+   else if(x8!='' && (x8<0 || isNaN(x8)==true)){
       alert("enter valid count ");
    }
-   if(x9!='' && (x9<0 || isNaN(x9)==true)){
+   else if(x9!='' && (x9<0 || isNaN(x9)==true)){
       alert("enter valid count ");
    }
-   if(x10!='' && (x10<0 || isNaN(x10)==true)){
+   else if(x10!='' && (x10<0 || isNaN(x10)==true)){
       alert("enter valid count");
    }
-   if(x11!='' && (x11<0 || isNaN(x11)==true)){
+   else if(x11!='' && (x11<0 || isNaN(x11)==true)){
       alert("enter valid count ");
    }
-   if(x12!='' && (x2<0 || isNaN(x12)==true)){
+   else if(x12!='' && (x2<0 || isNaN(x12)==true)){
       alert("enter valid count ");
    }
-   if(x13!='' && (x3<0 || isNaN(x13)==true)){
+   else if(x13!='' && (x3<0 || isNaN(x13)==true)){
       alert("enter valid count  ");
    }
-   if(x14!='' && (x4<0 || isNaN(x14)==true)){
+   else if(x14!='' && (x4<0 || isNaN(x14)==true)){
       alert("enter valid count ");
    }
-   if(x15!='' && (x5<0 || isNaN(x15)==true)){
+   else if(x15!='' && (x5<0 || isNaN(x15)==true)){
       alert("enter valid count ");
    }
-   if(x16!='' && (x6<0 || isNaN(x16)==true)){
+   else if(x16!='' && (x6<0 || isNaN(x16)==true)){
       alert("enter valid count ");
    }
-   if(x17!='' && (x7<0 || isNaN(x17)==true)){
+   else if(x17!='' && (x7<0 || isNaN(x17)==true)){
       alert("enter valid count ");
    }
-   if(x18!='' && (x8<0 || isNaN(x18)==true)){
+   else if(x18!='' && (x8<0 || isNaN(x18)==true)){
       alert("enter valid count ");
    }
-   if(x19!='' && (x9<0 || isNaN(x19)==true)){
+   else if(x19!='' && (x9<0 || isNaN(x19)==true)){
       alert("enter valid count ");
    }
-   if(x20!='' && (x10<0 || isNaN(x20)==true)){
+   else if(x20!='' && (x10<0 || isNaN(x20)==true)){
       alert("enter valid count");
    }
-   if(x21!='' && (x1<0 || isNaN(x21)==true)){
+   else if(x21!='' && (x1<0 || isNaN(x21)==true)){
       alert("enter valid count ");
    }
-   if(x22!='' && (x2<0 || isNaN(x22)==true)){
+   else if(x22!='' && (x2<0 || isNaN(x22)==true)){
       alert("enter valid count ");
    }
-   if(x23!='' && (x3<0 || isNaN(x23)==true)){
+   else if(x23!='' && (x3<0 || isNaN(x23)==true)){
       alert("enter valid count  ");
    }
-   if(x24!='' && (x4<0 || isNaN(x24)==true)){
+   else if(x24!='' && (x4<0 || isNaN(x24)==true)){
       alert("enter valid count ");
    }
-   if(x25!='' && (x5<0 || isNaN(x25)==true)){
+   else if(x25!='' && (x5<0 || isNaN(x25)==true)){
       alert("enter valid count ");
    }
-   if(x26!='' && (x6<0 || isNaN(x26)==true)){
+   else if(x26!='' && (x6<0 || isNaN(x26)==true)){
       alert("enter valid count ");
    }
-   if(x27!='' && (x7<0 || isNaN(x27)==true)){
+   else if(x27!='' && (x7<0 || isNaN(x27)==true)){
       alert("enter valid count ");
    }
-   if(x28!='' && (x8<0 || isNaN(x28)==true)){
+   else if(x28!='' && (x8<0 || isNaN(x28)==true)){
       alert("enter valid count ");
    }
-   if(x29!='' && (x9<0 || isNaN(x29)==true)){
+   else if(x29!='' && (x9<0 || isNaN(x29)==true)){
       alert("enter valid count ");
    }
-   if(x30!='' && (x10<0 || isNaN(x30)==true)){
+   else if(x30!='' && (x10<0 || isNaN(x30)==true)){
       alert("enter valid count");
    }
-   if(x31!='' && (x1<0 || isNaN(x31)==true)){
+   else if(x31!='' && (x1<0 || isNaN(x31)==true)){
       alert("enter valid count ");
    }
-   if(x32!='' && (x2<0 || isNaN(x32)==true)){
+   else if(x32!='' && (x2<0 || isNaN(x32)==true)){
       alert("enter valid count ");
    }
-   if(x33!='' && (x3<0 || isNaN(x33)==true)){
+   else if(x33!='' && (x3<0 || isNaN(x33)==true)){
       alert("enter valid count  ");
    }
-   if(x34!='' && (x4<0 || isNaN(x34)==true)){
+   else if(x34!='' && (x4<0 || isNaN(x34)==true)){
       alert("enter valid count ");
    }
-   if(x35!='' && (x5<0 || isNaN(x35)==true)){
+   else if(x35!='' && (x5<0 || isNaN(x35)==true)){
       alert("enter valid count ");
    }
-   if(x36!='' && (x6<0 || isNaN(x36)==true)){
+   else if(x36!='' && (x6<0 || isNaN(x36)==true)){
       alert("enter valid count ");
    }
-   if(x37!='' && (x7<0 || isNaN(x37)==true)){
+   else if(x37!='' && (x7<0 || isNaN(x37)==true)){
       alert("enter valid count ");
    }
-   if(x38!='' && (x8<0 || isNaN(x38)==true)){
+   else if(x38!='' && (x8<0 || isNaN(x38)==true)){
       alert("enter valid count ");
    }
-   if(x39!='' && (x9<0 || isNaN(x39)==true)){
+   else if(x39!='' && (x9<0 || isNaN(x39)==true)){
       alert("enter valid count ");
    }
-   if(x40!='' && (x10<0 || isNaN(x40)==true)){
+   else if(x40!='' && (x10<0 || isNaN(x40)==true)){
       alert("enter valid count");
+    }
+   else{
+    var xhttp = new XMLHttpRequest();
+      var foo = $.parseJSON(xhttp.responseText);
+      // var a=$('input[name=sp]').val();
+      // var b=$('input[name=le]').val();
+      // var c=$('input[name=sr]:checked').val();
+      var a= $('input[name^=class1]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var b = $('input[name^=subject1]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var c = $('input[name^=sp]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var d = $('input[name^=le]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var e = $('input[name^=sr]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var f = $('input[name^=class2]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var g = $('input[name^=subject2]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var h = $('input[name^=av]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var i2 = $('input[name^=cu]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var o = $('input[name^=subject3]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var p = $('input[name^=class3]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var q = $('input[name^=t]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var r = $('input[name^=e]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var s = $('input[name^=g]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var t = $('input[name^=Satisfactory]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var u = $('input[name^=p]').map(function(idx, elem) {
+         return $(elem).val(); 
+      }).get();
+      var j,co,co2,co3;
+      j=0;
+      co=0;
+      co2=0;
+      co3=0;
+      while(a[j]!=''  && j<=3){
+        co++;
+        j++;
+      }
+      j=0;
+      while(f[j]!=''  && j<=3){
+        co2++;
+        j++;
+      }
+      j=0;
+      while(o[j]!=''  && j<=3){
+        co3++;
+        j++;
+      }
+      var k = new Array(co);
+      var l = new Array(co);
+      var m = new Array(co2);
+      var n = new Array(co3);
+      for (var i = 0; i < co; i++) {
+        k[i] = document.getElementById('avr'+(i+1)).value;
+        l[i] = document.getElementById('avg'+(i+1)).value;
+        //l[i] = document.getElementById('avg'+(i+1)).value;
+      }
+      for (var i = 0; i < co2; i++) {
+        m[i] = document.getElementById('subj'+(i+1)).value;
+        //l[i] = document.getElementById('avg'+(i+1)).value;
+      }
+      for (var i = 0; i < co3; i++) {
+        n[i] = document.getElementById('total'+(i+1)).value;
+        //l[i] = document.getElementById('avg'+(i+1)).value;
+      }
+      // var points1 = document.getElementById('ans1').value;
+      // var points2 = document.getElementById('ans2').value;
+      // var Points = document.getElementById("total").value;
+      //console.log(o,co3,n);
+      console.log(o);
+       xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("result").innerHTML=this.responseText;
+    }
+  };
+  xhttp.open("GET", "cat3_submit.php?a="+a+"&b="+b+"&c="+c+"&d="+d+"&e="+e+"&avr="+k+"&avg="+l+"&rows1="+co+"&f="+f+"&g="+g+"&h="+h+"&i="+i2+"&m="+m+"&rows2="+co2+"&o="+o+"&p="+p+"&q="+q+"&r="+r+"&s="+s+"&t="+t+"&u="+u+"&n="+n+"&rows3="+co3, true);
+  xhttp.send(); }
    }
    // var x = myFunc(x21,x22,x23,x24,x25);
-  }
 // function myFunc(t,e,g,s,p){
 //   var xhttp = new XMLHttpRequest();
 //   console.log(t,e,g,s,p);
@@ -466,7 +569,7 @@ function myFunc1(){
   var j,co;
   j=0;
   co=0;
-  while(t[j]!=''){
+  while(t[j]!='' && j<=3){
     co++;
     j++;
   }
@@ -496,6 +599,7 @@ function myFunc1(){
   }
   sum = sum/co;
   document.getElementById('final').value=sum;
+  document.getElementById('p1').value=sum*10;
 }
 function myFunc2(){
   var t = $('input[name^=t]').map(function(idx, elem) {
@@ -513,7 +617,7 @@ function myFunc2(){
   var p = $('input[name^=p]').map(function(idx, elem) {
     return $(elem).val();
   }).get();
-  console.log(t,e,g,s,p);
+  //console.log(t,e,g,s,p);
   var j,co;
   j=0;
   co=0;
@@ -534,14 +638,14 @@ document.getElementById('avg').value=totp/co;
 document.getElementById('Points3').value=(document.getElementById('avg').value)*10;
 }
 function myFunc3(){
-  console.log("hi");
+  //console.log("hi");
   var t = $('input[name^=av]').map(function(idx, elem) {
     return $(elem).val(); 
   }).get();
   var e = $('input[name^=cu]').map(function(idx, elem) {
     return $(elem).val();
   }).get();
-  console.log(t,e);
+  //console.log(t,e);
   var j,co;
   j=0;
   co=0;
@@ -549,19 +653,35 @@ function myFunc3(){
     co++;
     j++;
   }
+  var sum=0;
+  var temp=0;
   var xhttp = new XMLHttpRequest();
-      var foo = $.parseJSON(xhttp.responseText);
-      for (var i = 0; i < co; i++) {
-        if (t[i]!='' && e[i]!='') {
-       xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById('subject'+(i)).value=this.responseText;
+  var foo = $.parseJSON(xhttp.responseText);
+  for (var i = 0; i < co; i++) {
+    if (t[i]!='' && e[i]!='') {
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById('subj'+(i)).value=this.responseText;
+          //console.log(document.getElementById('sub'+(i)).value);
+          temp=document.getElementById('subj'+(i)).value;
+          //console.log(temp);
+          sum=(+sum)+(+temp);
+          //console.log(sum,co);
+          sum=sum/co;
+          document.getElementById('p2').value=sum;
         }
-  };
-  xhttp.open("GET", "eg_3.php?av="+t[i]+"&cu="+e[i], true);
-  xhttp.send(); 
-}
-}
+      };
+      xhttp.open("GET", "eg_3.php?av="+t[i]+"&cu="+e[i], true);
+      xhttp.send(); 
+    }
+  }
+  // for (var i = 0; i < co; i++) {
+  //   var temp=document.getElementById('sub'+(i)).value;
+  //   sum=sum+temp;
+  // }
+  //console.log(sum);
+  sum=sum/co;
+  document.getElementById('p2').value=sum;
 }
 </script>
 </html> 
