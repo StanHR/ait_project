@@ -143,34 +143,34 @@ table td.expand {
     <td>1</td>
     <td><input type="text" name="class2[]" /></td>
     <td><input type="text" name="subject2[]" /></td>
-    <td><input type="text" id="n13" name="av[]" /></td>
+    <td><input type="text" id="n13" name="avp[]" /></td>
 	<td><input type="text" id="n14" name="cu[]" /></td>
 	<td rowspan="4">For col(4)>=95%<br>*if col(5)> col(4) Then col(7)=10<br>*if col(4)-col(5)<= Then col(6)=08<br>*if 5<= col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05<br>for col(4)<=95%<br>*if col(5)-col(4)>=2 Then col(7)=10<br>*if |col(5)-col(4)|>=2 then col(7)=08<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if 5<=col(4)-col(5)<2 then col(7)=06<br>*if col(4)-col(5)<5 then col(6)=05</td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj1"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subjc1"></textarea></td>
     <td rowspan="4"><textarea onkeyup="AutoGrowTextArea(this)" id="p2"></textarea></td></tr>
   <tr>
     <td>2</td>
     <td><input type="text" name="class2[]" /></td>
     <td><input type="text" name="subject2[]" /></td>
-    <td><input type="text" id="n15" name="av[]" /></td>
+    <td><input type="text" id="n15" name="avp[]" /></td>
 	<td><input type="text" id="n16" name="cu[]" /></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj2"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subjc2"></textarea></td>
    </tr>
   <tr>
     <td>3</td>
     <td><input type="text" name="class2[]" /></textarea></td>
     <td><input type="text" name="subject2[]" /></td>
-    <td><input type="text" id="n17" name="av[]" /></td>
+    <td><input type="text" id="n17" name="avp[]" /></td>
 	<td><input type="text" id="n18" name="cu[]" /></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj3"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subjc3"></textarea></td>
     </tr>
   <tr>
     <td>4</td>
     <td><input type="text" name="class2[]" /></td>
     <td><input type="text" name="subject2[]" /></td>
-    <td><input type="text" id="n19" name="av[]" /></td>
+    <td><input type="text" id="n19" name="avp[]" /></td>
 	<td><input type="text" id="n20" name="cu[]" /></td>
-    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subj4"></textarea></td>
+    <td><textarea onkeyup="AutoGrowTextArea(this)" id="subjc4"></textarea></td>
   </tr>
 </table></div>
 <br><br>
@@ -467,7 +467,7 @@ function myFunction() {
       var g = $('input[name^=subject2]').map(function(idx, elem) {
          return $(elem).val(); 
       }).get();
-      var h = $('input[name^=av]').map(function(idx, elem) {
+      var h = $('input[name^=avp]').map(function(idx, elem) {
          return $(elem).val(); 
       }).get();
       var i2 = $('input[name^=cu]').map(function(idx, elem) {
@@ -494,6 +494,13 @@ function myFunction() {
       var u = $('input[name^=p]').map(function(idx, elem) {
          return $(elem).val(); 
       }).get();
+      var a2=document.getElementById("final").value;
+      var a3=document.getElementById("p1").value;
+      var a4=document.getElementById("p2").value;
+      var a5=document.getElementById("avg").value;
+      var a6=document.getElementById("Points3").value;
+      //console.log(a2,a3,a4,a5,a6);
+      //console.log(p[0]);
       var j,co,co2,co3;
       j=0;
       co=0;
@@ -523,24 +530,27 @@ function myFunction() {
         //l[i] = document.getElementById('avg'+(i+1)).value;
       }
       for (var i = 0; i < co2; i++) {
-        m[i] = document.getElementById('subj'+(i+1)).value;
+        m[i] = document.getElementById('subjc'+(i+1)).value;
+        //console.log(document.getElementById('subjc'+(i+1)).value);
         //l[i] = document.getElementById('avg'+(i+1)).value;
       }
       for (var i = 0; i < co3; i++) {
         n[i] = document.getElementById('total'+(i+1)).value;
         //l[i] = document.getElementById('avg'+(i+1)).value;
       }
+      var demo=JSON.stringify(p);
+      //console.log(document.getElementById('subjc1').value);
       // var points1 = document.getElementById('ans1').value;
       // var points2 = document.getElementById('ans2').value;
       // var Points = document.getElementById("total").value;
       //console.log(o,co3,n);
-      console.log(o);
+      //console.log(o);
        xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("result").innerHTML=this.responseText;
     }
   };
-  xhttp.open("GET", "cat3_submit.php?a="+a+"&b="+b+"&c="+c+"&d="+d+"&e="+e+"&avr="+k+"&avg="+l+"&rows1="+co+"&f="+f+"&g="+g+"&h="+h+"&i="+i2+"&m="+m+"&rows2="+co2+"&o="+o+"&p="+p+"&q="+q+"&r="+r+"&s="+s+"&t="+t+"&u="+u+"&n="+n+"&rows3="+co3, true);
+  xhttp.open("GET", "cat3_submit.php?a="+JSON.stringify(a)+"&b="+JSON.stringify(b)+"&c="+JSON.stringify(c)+"&d="+JSON.stringify(d)+"&e="+JSON.stringify(e)+"&avr="+JSON.stringify(k)+"&avg="+JSON.stringify(l)+"&rows1="+co+"&f="+JSON.stringify(f)+"&g="+JSON.stringify(g)+"&h="+JSON.stringify(h)+"&i="+JSON.stringify(i2)+"&m="+JSON.stringify(m)+"&rows2="+co2+"&o="+JSON.stringify(o)+"&p="+JSON.stringify(p)+"&q="+JSON.stringify(q)+"&r="+JSON.stringify(r)+"&s="+JSON.stringify(s)+"&t="+JSON.stringify(t)+"&u="+JSON.stringify(u)+"&n="+JSON.stringify(n)+"&rows3="+co3+"&p1="+a2+"&p2="+a3+"&p3="+a4+"&p4="+a5+"&p5="+a6, true);
   xhttp.send(); }
    }
    // var x = myFunc(x21,x22,x23,x24,x25);
@@ -621,7 +631,7 @@ function myFunc2(){
   var j,co;
   j=0;
   co=0;
-  while(t[j]!=''){
+  while(t[j]!='' && j<=3){
     co++;
     j++;
   }
@@ -639,7 +649,7 @@ document.getElementById('Points3').value=(document.getElementById('avg').value)*
 }
 function myFunc3(){
   //console.log("hi");
-  var t = $('input[name^=av]').map(function(idx, elem) {
+  var t = $('input[name^=avp]').map(function(idx, elem) {
     return $(elem).val(); 
   }).get();
   var e = $('input[name^=cu]').map(function(idx, elem) {
@@ -649,7 +659,7 @@ function myFunc3(){
   var j,co;
   j=0;
   co=0;
-  while(t[j]!=''){
+  while(t[j]!='' && j<=3){
     co++;
     j++;
   }
@@ -661,9 +671,10 @@ function myFunc3(){
     if (t[i]!='' && e[i]!='') {
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById('subj'+(i)).value=this.responseText;
-          //console.log(document.getElementById('sub'+(i)).value);
-          temp=document.getElementById('subj'+(i)).value;
+          //console.log(this.responseText);
+          document.getElementById('subjc'+(i)).value=this.responseText;
+          //console.log(document.getElementById('subjc'+(i)).value);
+          temp=document.getElementById('subjc'+(i)).value;
           //console.log(temp);
           sum=(+sum)+(+temp);
           //console.log(sum,co);
